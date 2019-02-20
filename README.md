@@ -1,19 +1,6 @@
 # Go REST API Example
 A RESTfull API example for simple application with Go
 
-Provides the following endpoints
-
- 
-
-`GET: /v1/api/country/latlngbyip/{ipAddress} `
-
-`GET: /v1/api/country/namebyip/{ipAddress} `
-
-`GET: /v1/api/country/timezonebyip/{ipAddress} `
-
-`POST: /v1/api/country/whitelistedbyip `
-
- 
 ## Installation & Run
 go get github.com/TomDeMille/WhiteListAPI
 
@@ -48,19 +35,19 @@ go build
 NOTE : See included whiteListApi.postman_collection.json for example requests, 
 including the POST format
 
-#### (/v1/api/...)
+ **( /v1/api/... )**
 
 #### /ping
 * `GET` : Simple heartbeat request returns 200 if alive
 
 #### /country/whitelistrequest
-* `POST` : Post a JSON WhiteListRequest, returns a WhiteListResponse as JSON
+* **`POST`** : Post a JSON WhiteListRequest, returns a WhiteListResponse as JSON
 
 #### /country/latlngbyip/{ipAddress} `
-* `GET` : Given the IP returns a JSON object with Latitude and Longitude
+* **`GET`** : Given the IP returns a JSON object with Latitude and Longitude
  
 #### /country/timezonebyip/{ipAddress} `
-* `GET` : Given the IP returns a JSON object with the timezone
+* **`GET`** : Given the IP returns a JSON object with the timezone
 
 #### /country/namebyip/{ipAddress} `
-* `GET` : Given the IP returns a JSON object with the country name for that IP
+* **`GET`** : Given the IP returns a JSON object with the country name for that IP
