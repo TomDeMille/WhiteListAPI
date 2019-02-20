@@ -1,0 +1,46 @@
+---
+apiVersion: "extensions/v1beta1"
+kind: "Deployment"
+metadata:
+  name: "nginx-1"
+  namespace: "default"
+  labels:
+    app: "WhiteListAPI"
+    stack: "Golang"
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: "WhiteListAPI"
+      stack: "Golang"
+  template:
+    metadata:
+      labels:
+        app: "WhiteListAPI"
+        stack: "Golang"
+    spec:
+      containers:
+        - name: "goapi"
+          image: "gcr.io/whitelistapi/goapi:latest"
+---
+apiVersion: "autoscaling/v2beta1"
+kind: "HorizontalPodAutoscaler"
+metadata:
+  name: "nginx-1-hpa"
+  namespace: "default"
+  labels:
+    app: "WhiteListAPI"
+    stack: "Golang"
+spec:
+  scaleTargetRef:
+    kind: "Deployment"
+    name: "nginx-1"
+    apiVersion: "apps/v1beta1"
+  minReplicas: 1
+  maxReplicas: 5
+  metrics:
+    - type: "Resource"
+      resource:
+        name: "cpu"
+        targetAverageUtilization: 80
+
