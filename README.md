@@ -2,9 +2,11 @@
 A RESTfull API example utilizing Golang and MaxMind GEO DB
 
 ## Installation & Run
-go get github.com/TomDeMille/WhiteListAPI
+```go get github.com/TomDeMille/WhiteListAPI```
 
-or download using SSH/HTTPS from Git  (Git Clone github.com/TomDeMille/WhiteListAPI)
+or download using SSH/HTTPS from Git  
+
+```Git Clone github.com/TomDeMille/WhiteListAPI ```
 
 
 ```bash
