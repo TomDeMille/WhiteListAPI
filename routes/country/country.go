@@ -5,7 +5,7 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/render"
 	"net/http"
-	"whiteListApi/db"
+	"github.com/TomDeMille/WhiteListAPI/db"
 )
 
 // routes for this branch

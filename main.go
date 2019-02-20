@@ -8,7 +8,7 @@ import (
 	"log"
 	"net/http"
 	"strings"
-	"whiteListApi/routes/country"
+	"github.com/TomDeMille/WhiteListAPI/routes/country"
 )
 
 // setup base routing and default router settings
