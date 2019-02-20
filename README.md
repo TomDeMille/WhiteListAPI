@@ -1,5 +1,5 @@
 # Go REST API Example
-A RESTfull API example for simple application with Go
+A RESTfull API example utilizing Golang and MaxMind GEO DB
 
 ## Installation & Run
 go get github.com/TomDeMille/WhiteListAPI
