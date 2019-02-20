@@ -5,7 +5,7 @@ import (
 	"github.com/go-chi/chi"
 	"github.com/go-chi/render"
 	"net/http"
-	"whiteListApiOLD/db"
+	"whiteListApi/db"
 )
 
 // routes for this branch
@@ -42,7 +42,7 @@ func CheckWhiteList(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
-// basic validation on above request
+// basic validation on above requestr
 func (a *WhiteListRequest) Bind(r *http.Request) error {
 	if a.IPAddress == "" {
 		return errors.New("missing required IP field")
