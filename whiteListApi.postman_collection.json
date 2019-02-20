@@ -1,0 +1,149 @@
+{
+	"info": {
+		"_postman_id": "f0f15b76-fda4-441f-aca9-bb7744a1056c",
+		"name": "whiteListApi",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "PING",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/ping",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"ping"
+					]
+				},
+				"description": "ping"
+			},
+			"response": []
+		},
+		{
+			"name": "NameByIP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/country/NameByIP/64.53.56.226",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"country",
+						"NameByIP",
+						"64.53.56.226"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "LatLngByIP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/country/latlngbyip/64.53.56.226",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"country",
+						"latlngbyip",
+						"64.53.56.226"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "TimeZoneByIP",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/country/timezonebyip/64.53.56.226",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"country",
+						"timezonebyip",
+						"64.53.56.226"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "CheckWhiteList",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"ip\":\"64.53.56.226\",\n    \"countrycodes\" : [\n    \t{\"iso_code\" : \"GB\"},\n    \t{\"iso_code\" : \"EN\"},\n    \t{\"iso_code\" : \"SP\"},\n    \t{\"iso_code\" : \"US\"}\n    \t]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/api/country/whitelistedbyip",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"api",
+						"country",
+						"whitelistedbyip"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
