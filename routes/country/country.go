@@ -42,7 +42,7 @@ func CheckWhiteList(w http.ResponseWriter, r *http.Request) {
 	})
 }
 
-// basic validation on above requestr
+// basic validation on above request
 func (a *WhiteListRequest) Bind(r *http.Request) error {
 	if a.IPAddress == "" {
 		return errors.New("missing required IP field")
