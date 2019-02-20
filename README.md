@@ -19,6 +19,18 @@ go build
 # Check This : http://127.0.0.1:8080/v1/api/ping
 ```
 
+## Docker
+
+Alternately you can build and run this from docker:
+
+```docker build -t whitelistapi .```
+
+then
+
+```docker run --publish 8080:8080 whitelistapi```
+
+should do the trick
+
 ## Structure
 ```
 ├── whiteListApi
